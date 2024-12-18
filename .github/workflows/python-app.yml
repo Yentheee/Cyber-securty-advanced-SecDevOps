@@ -47,6 +47,24 @@ jobs:
     #     pip install bandit
     #     bandit -r .
 
+  dependabot:
+    runs-on: ubuntu-latest
 
-      - name: Run Dependabot
-        uses: dependabot/fetch-metadata@v1
+    steps:
+    - name: Set up Dependabot configuration
+      run: |
+        mkdir -p .github
+        cat > .github/dependabot.yml <<EOF
+        version: 2
+        updates:
+          - package-ecosystem: "pip"
+            directory: "/"
+            schedule:
+              interval: "weekly"
+            commit-message:
+              prefix: "deps"
+              include: "scope"
+            open-pull-requests-limit: 10
+        EOF
+    - name: Run Dependabot
+      uses: dependabot/fetch-metadata@v1
