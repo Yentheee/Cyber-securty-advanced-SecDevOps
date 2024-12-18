@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  # Je gebruikt Ubuntu, zoals je eerder deed
+    runs-on: ubuntu-latest  # Je gebruikt Ubuntu, zoals je eerder deed
 
     steps:
     - name: Check out code
