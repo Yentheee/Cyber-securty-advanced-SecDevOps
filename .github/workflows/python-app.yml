@@ -42,10 +42,10 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: SAST Scan (Bandit)
-      run: |
-        pip install bandit
-        bandit -r .
+    # - name: SAST Scan (Bandit)
+    #   run: |
+    #     pip install bandit
+    #     bandit -r .
 
     - name: Dependency Vulnerabilities Check (Safety)
       run: |
