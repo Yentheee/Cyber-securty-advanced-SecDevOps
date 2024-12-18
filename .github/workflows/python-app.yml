@@ -47,8 +47,9 @@ jobs:
     #     pip install bandit
     #     bandit -r .
 
-    - name: Dependency Vulnerabilities Check (Safety)
+    - name: Dependency Vulnerabilities Check (PyUp)
       run: |
-        pip install safety
-        safety scan
+        pip install pyup
+        pyup safety check
+
 
