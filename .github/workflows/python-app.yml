@@ -46,15 +46,7 @@ jobs:
     #   run: |
     #     pip install bandit
     #     bandit -r .
-    - name: Maak .pyup.yml aan
+    - name: Security Scan with Safety
       run: |
-        echo "safety:" > .pyup.yml
-        echo "  allow_all_licenses: false" >> .pyup.yml
-        echo "  use_requirements: true" >> .pyup.yml
-
-    - name: Dependency Vulnerabilities Check (PyUp)
-      run: |
-        pip install pyup
-        pyup safety check --config .pyup.yml --verbose
-
-
+        pip install safety
+        safety check -r requirements.txt

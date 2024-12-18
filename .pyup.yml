@@ -1,5 +1,0 @@
-# .pyup.yml
-safety:
-  # Dit definieert het gedrag voor de Safety scan
-  allow_all_licenses: false
-  use_requirements: true
