@@ -49,6 +49,6 @@ jobs:
         bandit -r .
 
     - name: Dependency Check (Safety)
-      uses: pyupio/safety-action@v2
+      uses: pyupio/safety-action@v1
       with:
         api_key: ${{ secrets.SAFETY_API_KEY }}
