@@ -47,7 +47,7 @@ jobs:
         pip install bandit
         bandit -r .
 
-  dependabot:
+   dependabot:
     runs-on: ubuntu-latest
 
     steps:
