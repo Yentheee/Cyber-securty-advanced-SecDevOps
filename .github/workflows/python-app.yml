@@ -50,6 +50,6 @@ jobs:
     - name: Dependency Vulnerabilities Check (PyUp)
       run: |
         pip install pyup
-        pyup safety check
+        pyup safety check --config ./.pyup.yml
 
 
